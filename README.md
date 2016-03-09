@@ -1,9 +1,9 @@
-# fuse-demo-angular
+# fuse-demo-angular2
 
-A tinder like application using fuse and angular 2
+A tinder like application using fuse and angular2
 
 <center>
-	<img src="doc/fuse-demo-angular.gif" >
+	<video src="doc/fuse-demo-angular.mov" >
 </center>
 
 ## Pre requisites
@@ -38,4 +38,4 @@ npm run fuse:build:ios
 # Run on an Android device
 npm run fuse:build:android
 ```
-Visit your browser at `http://localhost:5000`
+
