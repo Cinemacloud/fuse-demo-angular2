@@ -1,0 +1,36 @@
+<Panel Items="{children0}" MatchKey="type" ux:Class="Main">
+    <Panel ux:Case="Main_Scope1" Margin="0" Height="400" Width="293" Color="#ccc" Padding="1">
+        <Rotation Degrees="{var0}" />
+        <DockPanel>
+            <StackPanel Alignment="VerticalCenter" Height="50" Dock="Top">
+                <Text Alignment="Center" Value="{var1}" />
+            </StackPanel>
+            <Image Opacity="0" File="../../../resources/Dislike.png" Dock="Fill" StretchMode="UniformToFill" ux:Name="dislikePic" />
+            <Image Opacity="0" File="../../../resources/Like.png" Dock="Fill" StretchMode="UniformToFill" ux:Name="likePic" />
+            <Image StretchMode="UniformToFill" Dock="Fill">
+                <CachedHttpImageSource Url="{var2}" />
+            </Image>
+        </DockPanel>
+        <Panel Margin="0" Width="100%" Height="100%" Color="#fff">
+            <DropShadow ux:Name="shadow" Distance="0" Size="2" />
+        </Panel>
+        <Draggable />
+        <WhileDragging>
+            <BringToFront />
+            <Scale Factor="1.1" />
+            <Change shadow.Size="20" />
+            <Change shadow.Distance="20" />
+        </WhileDragging>
+        <InForceFieldAnimation ForceField="dislikeAttractor" From="0.1" To="0.7">
+            <Rotate Degrees="-8" />
+            <Change dislikePic.Opacity="1" />
+        </InForceFieldAnimation>
+        <InForceFieldAnimation ForceField="likeAttractor" From="0.1" To="0.7">
+            <Rotate Degrees="8" />
+            <Change likePic.Opacity="1" />
+        </InForceFieldAnimation>
+    </Panel>
+    <PointAttractor ux:Name="centerAttractor" Radius="800" Strength="250" />
+    <PointAttractor ux:Name="dislikeAttractor" Offset="-400,0,0" Radius="380" Strength="600" />
+    <PointAttractor ux:Name="likeAttractor" Offset="400,0,0" Radius="380" Strength="600" />
+</Panel>
