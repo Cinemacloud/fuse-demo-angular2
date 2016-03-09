@@ -3,7 +3,7 @@
 A tinder like application using fuse and angular2
 
 <center>
-	<video src="doc/fuse-demo-angular.mov" >
+	<img src="https://cloud.githubusercontent.com/assets/10189060/13598283/a9ea8e4a-e525-11e5-87e1-a62e2155b8d7.jpg" class="no-border" style="height:450px">
 </center>
 
 ## Pre requisites
